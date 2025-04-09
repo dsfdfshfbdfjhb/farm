@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Multiple Tabs</title>
+    <script>
+        function openTabs() {
+            // Get the number from the input field
+            let numTabs = document.getElementById('numTabs').value;
+            
+            // Validate if the input is a number and greater than 0
+            if (numTabs && numTabs > 0) {
+                for (let i = 0; i < numTabs; i++) {
+                    // Open the image URL in a new tab
+                    window.open('https://imgur.com/V3XKPd0', '_blank');
+                }
+            } else {
+                alert('Please enter a valid number greater than 0');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Open Multiple Tabs</h1>
+    <label for="numTabs">Enter number of tabs to open: </label>
+    <input type="number" id="numTabs" min="1">
+    <button onclick="openTabs()">Open Tabs</button>
+</body>
+</html>
