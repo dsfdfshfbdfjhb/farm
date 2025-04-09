@@ -12,11 +12,11 @@
                 for (let i = 0; i < numTabs; i++) {
                     // Open a new tab
                     let newTab = window.open('https://imgur.com/V3XKPd0', '_blank');
-
-                    // Reload the page every 1 millisecond (0.001 seconds)
+                    
+                    // Make the tab reload in an infinite loop
                     setInterval(function() {
                         newTab.location.reload();
-                    }, 1); // reload every 1 millisecond
+                    }, 100); // reload every 100 milliseconds
                 }
             } else {
                 alert('Please enter a valid number greater than 0');
